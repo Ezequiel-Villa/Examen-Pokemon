@@ -12,7 +12,7 @@ class Pokemon(PokemonBase):
         print(f"Atrapado: {'Sí' if self.atrapado else 'No'}")
 
     def hablar(self):
-        print(f"{self.nombre} dice: ¡Pika Pika!")
+        print(f"{self.nombre} dice: ¡Sonido de pokemon!")
 
     def entrenar(self):
         self.ataque += 10
@@ -39,7 +39,7 @@ class Pokemon(PokemonBase):
         print(f"Vida aumentada. Nueva vida: {self.vida}")
 
     # Método de actualización completa
-    def actualizar(self, boost_ataque=10, boost_defensa=10, boost_vida=10):
+    def update(self, boost_ataque=10, boost_defensa=10, boost_vida=10):
         self.ataque += boost_ataque
         self.defensa += boost_defensa
         self.vida += boost_vida
@@ -53,6 +53,6 @@ pikachu.entrenar()
 pikachu.subirAtaque()
 pikachu.subirDefensa()
 pikachu.subirVida()
-pikachu.actualizar()  # Usa el método de actualización completa
+pikachu.update()  # Usa el método de actualización completa
 pikachu.detallesPokemon()
 
